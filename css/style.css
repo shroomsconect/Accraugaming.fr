@@ -1,0 +1,259 @@
+html {
+	background-image: url("../image/background3.jpg");
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
+body {
+
+	margin: 0;
+	padding: 0;
+}
+
+main.centrale_haut {
+
+	background-color: rgba(0,0,0,0.2);
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5em;
+	width: 90%;
+}
+
+main.centrale_haut2 {
+
+	background-color: rgba(79,195,204,0.5);
+	height: 50em;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5em;
+	width: 90%;
+}
+
+main.centrale_haut2 ul {
+
+	display: flex;
+	flex-direction: column;
+	line-height: 1.8em;
+	list-style: none;
+	margin: 0 auto;
+	padding: 0;
+}
+
+main.centrale_haut2 label:nth-of-type(1),
+main.centrale_haut2 label:nth-of-type(2),
+main.centrale_haut2 label:nth-of-type(3){
+
+	background-color: red;
+	border-right: 2px solid blue;
+	border-bottom: 2px solid blue;
+	display: flex;
+	min-height: 50px;
+	min-width: 150px;
+	align-items: center;
+	justify-content: center;
+
+}
+
+main.centrale_haut2 label:nth-of-type(1){
+	background-color: pink;
+}
+
+#onglet-1:checked ~ div#hiddenMenuVie2,
+#onglet-2:checked ~ div#hiddenMenuVie1,
+#sousOnglet-5:checked ~ div#hiddenMenuVie1,
+#sousOnglet-6:checked ~ div#hiddenMenuVie1{
+
+		display: flex;
+}
+#onglet-1:checked ~ div#hiddenMenuVie1,
+#onglet-2:checked ~ div#hiddenMenuVie2,
+#sousOnglet-5:checked ~ div#hiddenMenuVie2,
+#sousOnglet-6:checked ~ div#hiddenMenuVie2{
+
+		display: none;
+}
+
+#onglet-1:checked ~ div#sousMenuVieBlock1,
+#onglet-2:checked ~ div#sousMenuVieBlock4,
+#sousOnglet-2:checked ~ div#sousMenuVieBlock2,
+#sousOnglet-3:checked ~ div#sousMenuVieBlock3,
+#sousOnglet-5:checked ~ div#sousMenuVieBlock5,
+#sousOnglet-6:checked ~ div#sousMenuVieBlock6{
+
+		display: block;
+}
+#onglet-1:checked ~ div#sousMenuVieBlock2,
+#onglet-1:checked ~ div#sousMenuVieBlock3,
+#onglet-2:checked ~ div#sousMenuVieBlock1,
+#onglet-2:checked ~ div#sousMenuVieBlock5,
+#onglet-2:checked ~ div#sousMenuVieBlock6,
+#sousOnglet-2:checked ~ div#sousMenuVieBlock1,
+#sousOnglet-2:checked ~ div#sousMenuVieBlock3,
+#sousOnglet-3:checked ~ div#sousMenuVieBlock1,
+#sousOnglet-3:checked ~ div#sousMenuVieBlock2,
+#sousOnglet-5:checked ~ div#sousMenuVieBlock1,
+#sousOnglet-5:checked ~ div#sousMenuVieBlock4,
+#sousOnglet-5:checked ~ div#sousMenuVieBlock6,
+#sousOnglet-6:checked ~ div#sousMenuVieBlock1,
+#sousOnglet-6:checked ~ div#sousMenuVieBlock4,
+#sousOnglet-6:checked ~ div#sousMenuVieBlock5{
+		display: none;
+}
+
+nav.barre_de_liens {
+	background-image: linear-gradient(#461300,#63300A,#5E2B02,#63300A,#461300);
+	width: 100%;
+	height: 3em;
+	display: flex;
+}
+
+ul.barre_menu li{
+	background-color: blue;
+	display: flex;
+	width: 100%;
+}
+
+.barre_menu {
+
+	display: flex;
+    margin: 0;
+    width: 100%;
+    padding: 0;
+
+}
+
+#barre_menu_lien1,
+#barre_menu_lien2,
+#barre_menu_lien3{
+
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	line-height: 3em;
+}
+
+ul.barre_menu a{
+	text-decoration: none;
+	color: red;
+}
+
+ul.barre_menu a:hover{
+	background-color: green;
+}
+
+/*ul.barre_menu a, ul.barre_menu a:visited, ul.barre_menu a:hover, ul.barre_menu a:focus, ul.barre_menu a:active{
+	text-decoration: none;
+	color: red;
+}*/
+
+.experience {
+	background-color: white;
+	padding: 1em 0;
+}
+
+.h2 {
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+.indentation {
+	text-indent: 2em;
+}
+.indentation2 {
+	margin-left: 4em;
+}
+.indentation3 {
+	text-indent: 6em;
+}
+
+.alignement{
+	background-color: red;
+}
+
+.cursor {
+	cursor: pointer;
+}
+
+#hiddenMenuVie1 {
+	display: none;
+}
+
+#hiddenMenuVie2 {
+	display: flex;
+}
+
+.displayNone{
+	display: none;
+}
+
+.flex{
+	display: flex;
+}
+
+input#onglet-1:checked ~ div#menuViePrincipale > label#menuVieProfessionelle,
+input#onglet-1:checked ~ div#hiddenMenuVie2 > label#sousMenuVie1,
+input#sousOnglet-2:checked ~ div#menuViePrincipale > label#menuVieProfessionelle,
+input#sousOnglet-2:checked ~ div#hiddenMenuVie2 > label#sousMenuVie2,
+input#sousOnglet-3:checked ~ div#menuViePrincipale > label#menuVieProfessionelle,
+input#sousOnglet-3:checked ~ div#hiddenMenuVie2 > label#sousMenuVie3,
+input#onglet-2:checked ~ div#menuViePrincipale > label#menuViePersonnelle,
+input#onglet-2:checked ~ div#hiddenMenuVie1 > label#sousMenuVie4,
+input#sousOnglet-5:checked ~ div#menuViePrincipale > label#menuViePersonnelle,
+input#sousOnglet-5:checked ~ div#hiddenMenuVie1 > label#sousMenuVie5,
+input#sousOnglet-6:checked ~ div#menuViePrincipale > label#menuViePersonnelle,
+input#sousOnglet-6:checked ~ div#hiddenMenuVie1 > label#sousMenuVie6{
+
+		background-color: pink;
+		transition: all 0.5s;
+}
+
+input#sousOnglet-2:checked ~ div#hiddenMenuVie2 > label#sousMenuVie1,
+input#sousOnglet-3:checked ~ div#hiddenMenuVie2 > label#sousMenuVie1,
+input#sousOnglet-5:checked ~ div#hiddenMenuVie1 > label#sousMenuVie4,
+input#sousOnglet-6:checked ~ div#hiddenMenuVie1 > label#sousMenuVie4,
+input#onglet-2:checked ~ div#menuViePrincipale > label#menuVieProfessionelle,
+input#sousOnglet-5:checked ~ div#menuViePrincipale > label#menuVieProfessionelle,
+input#sousOnglet-6:checked ~ div#menuViePrincipale > label#menuVieProfessionelle{
+
+	background-color: red;
+	transition: all 0.5s;
+}
+
+input#onglet-1 ~ div#menuViePrincipale > label#menuVieProfessionelle:hover,
+input#onglet-1 ~ div#hiddenMenuVie2 > label#sousMenuVie1:hover,
+input#sousOnglet-2 ~ div#menuViePrincipale > label#menuVieProfessionelle:hover,
+input#sousOnglet-2 ~ div#hiddenMenuVie2 > label#sousMenuVie2:hover,
+input#sousOnglet-3 ~ div#menuViePrincipale > label#menuVieProfessionelle:hover,
+input#sousOnglet-3 ~ div#hiddenMenuVie2 > label#sousMenuVie3:hover,
+input#onglet-2 ~ div#menuViePrincipale > label#menuViePersonnelle:hover,
+input#onglet-2 ~ div#hiddenMenuVie1 > label#sousMenuVie4:hover,
+input#sousOnglet-5 ~ div#menuViePrincipale > label#menuViePersonnelle:hover,
+input#sousOnglet-5 ~ div#hiddenMenuVie1 > label#sousMenuVie5:hover,
+input#sousOnglet-6 ~ div#menuViePrincipale > label#menuViePersonnelle:hover,
+input#sousOnglet-6 ~ div#hiddenMenuVie1 > label#sousMenuVie6:hover{
+
+		background-color: pink;
+		transition: all 0.2s;
+}
+
+.liAlignementMenuVieAvant {
+
+	min-width: 10em;
+}
+
+.liAlignementMenuVieApres {
+
+	padding-left: 2em;
+}
+
+.marginLeftIconeLien {
+
+	margin-left: 10px;
+}
+
+.lienPersonalise {
+
+
+}
