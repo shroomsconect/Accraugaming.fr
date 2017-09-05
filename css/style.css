@@ -1,38 +1,47 @@
-html {
-	background-image: url("../image/background3.jpg");
+/*@import url('https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre');*/
+@font-face{
+  font-family: "Baloo Bhaijaan";
+  src: url("BalooBhaijaan-Regular.ttf");
+}
+
+.fontFamily{
+	font-family: 'Baloo Bhaijaan', cursive;
+}
+
+html{
+
+}
+
+body{
+	background-image: url("../image/background.jpg");
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
-}
-
-body {
-
 	margin: 0;
 	padding: 0;
 }
 
-main.centrale_haut {
-
+main.centraleHaut{
 	background-color: rgba(0,0,0,0.2);
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 5em;
-	width: 90%;
+	min-width: 300px;
+	max-width: 1200px;
 }
 
-main.centrale_haut2 {
-
-	background-color: rgba(79,195,204,0.5);
+main.centraleHautCv {
+	background-color: rgba(0, 0, 0, 0.39);
 	height: 50em;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 5em;
-	width: 90%;
+	min-width: 300px;
+	max-width: 1200px;
 }
 
-main.centrale_haut2 ul {
-
+main.centraleHautCv ul{
 	display: flex;
 	flex-direction: column;
 	line-height: 1.8em;
@@ -41,112 +50,155 @@ main.centrale_haut2 ul {
 	padding: 0;
 }
 
-main.centrale_haut2 label:nth-of-type(1),
-main.centrale_haut2 label:nth-of-type(2),
-main.centrale_haut2 label:nth-of-type(3){
-
-	background-color: red;
-	border-right: 2px solid blue;
-	border-bottom: 2px solid blue;
+main.centraleHautCv label:nth-of-type(1).labelMenu,
+main.centraleHautCv label:nth-of-type(2).labelMenu,
+main.centraleHautCv label:nth-of-type(3).labelMenu{
+	background-image: linear-gradient(#13899c,#1892a7,#1498af,#149ab1,#1793a7);
 	display: flex;
 	min-height: 50px;
 	min-width: 150px;
 	align-items: center;
 	justify-content: center;
-
 }
 
-main.centrale_haut2 label:nth-of-type(1){
-	background-color: pink;
+main.centraleHautCv label:nth-of-type(1).labelMenu{
+	background-image: linear-gradient(#0d6977,#1892a7,#1498af,#149ab1,#0f7384);
 }
 
-#onglet-1:checked ~ div#hiddenMenuVie2,
-#onglet-2:checked ~ div#hiddenMenuVie1,
-#sousOnglet-5:checked ~ div#hiddenMenuVie1,
-#sousOnglet-6:checked ~ div#hiddenMenuVie1{
+#sousMenuVie1,
+#sousMenuVie2,
+#sousMenuVie3,
+#sousMenuVie4,
+#sousMenuVie5,
+#sousMenuVie6{
+	min-height: 0;
+	font-size: 0;
+	border-right: 0px solid blue;
+	border-bottom: 0px solid blue;
+}
 
+
+#hiddenMenuVie1,
+#hiddenMenuVie2{
+	max-height: 0;
+	min-height: 0;
+	transition: all 0.3s;
+}
+
+#menuViePrincipale{
+	max-width: 0;
+	color: rgb(224, 222, 222);
+}
+
+#hiddenMenuVie1,
+#hiddenMenuVie2{
+	max-width: 0;
+	color: rgb(224, 222, 222);
+}
+
+/*
+#menuViePrincipale:hover ~ #hiddenMenuVie2,
+#hiddenMenuVie2:hover,
+#menuViePrincipale:hover ~ #hiddenMenuVie1,
+#hiddenMenuVie1:hover{
+	max-height: 50px;
+	min-height: 50px;
+	transition: all 0.3s;
+}
+
+#menuViePrincipale:hover ~ #hiddenMenuVie2 > #sousMenuVie1,
+#menuViePrincipale:hover ~ #hiddenMenuVie2 > #sousMenuVie2,
+#menuViePrincipale:hover ~ #hiddenMenuVie2 > #sousMenuVie3,
+#hiddenMenuVie2:hover > #sousMenuVie1,
+#hiddenMenuVie2:hover #sousMenuVie2,
+#hiddenMenuVie2:hover #sousMenuVie3,
+#menuViePrincipale:hover ~ #hiddenMenuVie1 > #sousMenuVie4,
+#menuViePrincipale:hover ~ #hiddenMenuVie1 > #sousMenuVie5,
+#menuViePrincipale:hover ~ #hiddenMenuVie1 > #sousMenuVie6,
+#hiddenMenuVie1:hover > #sousMenuVie4,
+#hiddenMenuVie1:hover #sousMenuVie5,
+#hiddenMenuVie1:hover #sousMenuVie6{
+	font-size: 1em;
+	transition: all 0.3s;
+}
+
+#onglet1:checked ~ div#hiddenMenuVie2,
+#onglet2:checked ~ div#hiddenMenuVie1,
+#sousOnglet5:checked ~ div#hiddenMenuVie1,
+#sousOnglet6:checked ~ div#hiddenMenuVie1{
 		display: flex;
 }
-#onglet-1:checked ~ div#hiddenMenuVie1,
-#onglet-2:checked ~ div#hiddenMenuVie2,
-#sousOnglet-5:checked ~ div#hiddenMenuVie2,
-#sousOnglet-6:checked ~ div#hiddenMenuVie2{
-
+#onglet1:checked ~ div#hiddenMenuVie1,
+#onglet2:checked ~ div#hiddenMenuVie2,
+#sousOnglet5:checked ~ div#hiddenMenuVie2,
+#sousOnglet6:checked ~ div#hiddenMenuVie2{
 		display: none;
 }
 
-#onglet-1:checked ~ div#sousMenuVieBlock1,
-#onglet-2:checked ~ div#sousMenuVieBlock4,
-#sousOnglet-2:checked ~ div#sousMenuVieBlock2,
-#sousOnglet-3:checked ~ div#sousMenuVieBlock3,
-#sousOnglet-5:checked ~ div#sousMenuVieBlock5,
-#sousOnglet-6:checked ~ div#sousMenuVieBlock6{
-
+#onglet1:checked ~ div#sousMenuVieBlock1,
+#onglet2:checked ~ div#sousMenuVieBlock4,
+#sousOnglet2:checked ~ div#sousMenuVieBlock2,
+#sousOnglet3:checked ~ div#sousMenuVieBlock3,
+#sousOnglet5:checked ~ div#sousMenuVieBlock5,
+#sousOnglet6:checked ~ div#sousMenuVieBlock6{
 		display: block;
 }
-#onglet-1:checked ~ div#sousMenuVieBlock2,
-#onglet-1:checked ~ div#sousMenuVieBlock3,
-#onglet-2:checked ~ div#sousMenuVieBlock1,
-#onglet-2:checked ~ div#sousMenuVieBlock5,
-#onglet-2:checked ~ div#sousMenuVieBlock6,
-#sousOnglet-2:checked ~ div#sousMenuVieBlock1,
-#sousOnglet-2:checked ~ div#sousMenuVieBlock3,
-#sousOnglet-3:checked ~ div#sousMenuVieBlock1,
-#sousOnglet-3:checked ~ div#sousMenuVieBlock2,
-#sousOnglet-5:checked ~ div#sousMenuVieBlock1,
-#sousOnglet-5:checked ~ div#sousMenuVieBlock4,
-#sousOnglet-5:checked ~ div#sousMenuVieBlock6,
-#sousOnglet-6:checked ~ div#sousMenuVieBlock1,
-#sousOnglet-6:checked ~ div#sousMenuVieBlock4,
-#sousOnglet-6:checked ~ div#sousMenuVieBlock5{
+
+#onglet1:checked ~ div#sousMenuVieBlock2,
+#onglet1:checked ~ div#sousMenuVieBlock3,
+#onglet2:checked ~ div#sousMenuVieBlock1,
+#onglet2:checked ~ div#sousMenuVieBlock5,
+#onglet2:checked ~ div#sousMenuVieBlock6,
+#sousOnglet2:checked ~ div#sousMenuVieBlock1,
+#sousOnglet2:checked ~ div#sousMenuVieBlock3,
+#sousOnglet3:checked ~ div#sousMenuVieBlock1,
+#sousOnglet3:checked ~ div#sousMenuVieBlock2,
+#sousOnglet5:checked ~ div#sousMenuVieBlock1,
+#sousOnglet5:checked ~ div#sousMenuVieBlock4,
+#sousOnglet5:checked ~ div#sousMenuVieBlock6,
+#sousOnglet6:checked ~ div#sousMenuVieBlock1,
+#sousOnglet6:checked ~ div#sousMenuVieBlock4,
+#sousOnglet6:checked ~ div#sousMenuVieBlock5{
 		display: none;
 }
+*/
 
-nav.barre_de_liens {
-	background-image: linear-gradient(#461300,#63300A,#5E2B02,#63300A,#461300);
-	width: 100%;
-	height: 3em;
-	display: flex;
+nav.barreDeLien {
+	background-image: linear-gradient(#13899c,#1892a7,#1498af,#149ab1,#1793a7);
+    width: 100%;
+    height: 3em;
 }
 
-ul.barre_menu li{
-	background-color: blue;
-	display: flex;
+ul.barreMenu li{
+	border-right: 2px dashed #00859c;
+	border-left: 2px dashed #00859c;
 	width: 100%;
 }
 
-.barre_menu {
-
-	display: flex;
+.barreMenu {
     margin: 0;
     width: 100%;
     padding: 0;
-
 }
 
-#barre_menu_lien1,
-#barre_menu_lien2,
-#barre_menu_lien3{
-
+#barreMenuLien1,
+#barreMenuLien2,
+#barreMenuLien3{
 	height: 100%;
 	width: 100%;
 	text-align: center;
 	line-height: 3em;
 }
 
-ul.barre_menu a{
-	text-decoration: none;
-	color: red;
+ul.barreMenu a:hover{
+	background-image: linear-gradient(#177180,#1892a7,#1498af,#1892a7,#177180);
 }
 
-ul.barre_menu a:hover{
-	background-color: green;
-}
-
-/*ul.barre_menu a, ul.barre_menu a:visited, ul.barre_menu a:hover, ul.barre_menu a:focus, ul.barre_menu a:active{
+ul.barreMenu a, ul.barreMenu a:visited, ul.barreMenu a:focus, ul.barreMenu a:active{
 	text-decoration: none;
-	color: red;
-}*/
+	color: rgb(224, 222, 222);
+	font-family: 'Baloo Bhaijaan', cursive;
+}
 
 .experience {
 	background-color: white;
@@ -158,30 +210,8 @@ ul.barre_menu a:hover{
 	font-weight: bold;
 }
 
-.indentation {
-	text-indent: 2em;
-}
-.indentation2 {
-	margin-left: 4em;
-}
-.indentation3 {
-	text-indent: 6em;
-}
-
-.alignement{
-	background-color: red;
-}
-
 .cursor {
 	cursor: pointer;
-}
-
-#hiddenMenuVie1 {
-	display: none;
-}
-
-#hiddenMenuVie2 {
-	display: flex;
 }
 
 .displayNone{
@@ -192,68 +222,177 @@ ul.barre_menu a:hover{
 	display: flex;
 }
 
-input#onglet-1:checked ~ div#menuViePrincipale > label#menuVieProfessionelle,
-input#onglet-1:checked ~ div#hiddenMenuVie2 > label#sousMenuVie1,
-input#sousOnglet-2:checked ~ div#menuViePrincipale > label#menuVieProfessionelle,
-input#sousOnglet-2:checked ~ div#hiddenMenuVie2 > label#sousMenuVie2,
-input#sousOnglet-3:checked ~ div#menuViePrincipale > label#menuVieProfessionelle,
-input#sousOnglet-3:checked ~ div#hiddenMenuVie2 > label#sousMenuVie3,
-input#onglet-2:checked ~ div#menuViePrincipale > label#menuViePersonnelle,
-input#onglet-2:checked ~ div#hiddenMenuVie1 > label#sousMenuVie4,
-input#sousOnglet-5:checked ~ div#menuViePrincipale > label#menuViePersonnelle,
-input#sousOnglet-5:checked ~ div#hiddenMenuVie1 > label#sousMenuVie5,
-input#sousOnglet-6:checked ~ div#menuViePrincipale > label#menuViePersonnelle,
-input#sousOnglet-6:checked ~ div#hiddenMenuVie1 > label#sousMenuVie6{
-
-		background-color: pink;
-		transition: all 0.5s;
+.floatRight{
+	float: right;
 }
 
-input#sousOnglet-2:checked ~ div#hiddenMenuVie2 > label#sousMenuVie1,
-input#sousOnglet-3:checked ~ div#hiddenMenuVie2 > label#sousMenuVie1,
-input#sousOnglet-5:checked ~ div#hiddenMenuVie1 > label#sousMenuVie4,
-input#sousOnglet-6:checked ~ div#hiddenMenuVie1 > label#sousMenuVie4,
-input#onglet-2:checked ~ div#menuViePrincipale > label#menuVieProfessionelle,
-input#sousOnglet-5:checked ~ div#menuViePrincipale > label#menuVieProfessionelle,
-input#sousOnglet-6:checked ~ div#menuViePrincipale > label#menuVieProfessionelle{
-
-	background-color: red;
-	transition: all 0.5s;
+.monIdentite{
+	font-family: monospace;
+    font-weight: bold;
+    text-align-last: left;
+    font-size: 1.3em;
+    line-height: 0.6em;
+    background: rgba(27, 128, 146, 0.73);
+    margin-right: 2em;
+    padding: 0px 10px 0px 10px;
 }
 
-input#onglet-1 ~ div#menuViePrincipale > label#menuVieProfessionelle:hover,
-input#onglet-1 ~ div#hiddenMenuVie2 > label#sousMenuVie1:hover,
-input#sousOnglet-2 ~ div#menuViePrincipale > label#menuVieProfessionelle:hover,
-input#sousOnglet-2 ~ div#hiddenMenuVie2 > label#sousMenuVie2:hover,
-input#sousOnglet-3 ~ div#menuViePrincipale > label#menuVieProfessionelle:hover,
-input#sousOnglet-3 ~ div#hiddenMenuVie2 > label#sousMenuVie3:hover,
-input#onglet-2 ~ div#menuViePrincipale > label#menuViePersonnelle:hover,
-input#onglet-2 ~ div#hiddenMenuVie1 > label#sousMenuVie4:hover,
-input#sousOnglet-5 ~ div#menuViePrincipale > label#menuViePersonnelle:hover,
-input#sousOnglet-5 ~ div#hiddenMenuVie1 > label#sousMenuVie5:hover,
-input#sousOnglet-6 ~ div#menuViePrincipale > label#menuViePersonnelle:hover,
-input#sousOnglet-6 ~ div#hiddenMenuVie1 > label#sousMenuVie6:hover{
+.indentation {
+	text-indent: 2em;
+}
+.indentation2 {
+	position: relative;
+	margin-left: 4em;
+}
 
-		background-color: pink;
+.styleList::before {
+	content: "*";
+	padding-right: 5px;
+}
+
+.indentation3 {
+	text-indent: 6em;
+}
+
+input#onglet1:checked ~ div#menuViePrincipale > label#menuVieProfessionelle,
+input#onglet1:checked ~ div#hiddenMenuVie2 > label#sousMenuVie1,
+input#sousOnglet2:checked ~ div#menuViePrincipale > label#menuVieProfessionelle,
+input#sousOnglet2:checked ~ div#hiddenMenuVie2 > label#sousMenuVie2,
+input#sousOnglet3:checked ~ div#menuViePrincipale > label#menuVieProfessionelle,
+input#sousOnglet3:checked ~ div#hiddenMenuVie2 > label#sousMenuVie3,
+input#onglet2:checked ~ div#menuViePrincipale > label#menuViePersonnelle,
+input#onglet2:checked ~ div#hiddenMenuVie1 > label#sousMenuVie4,
+input#sousOnglet5:checked ~ div#menuViePrincipale > label#menuViePersonnelle,
+input#sousOnglet5:checked ~ div#hiddenMenuVie1 > label#sousMenuVie5,
+input#sousOnglet6:checked ~ div#menuViePrincipale > label#menuViePersonnelle,
+input#sousOnglet6:checked ~ div#hiddenMenuVie1 > label#sousMenuVie6{
+	background-image: linear-gradient(#0d6977,#1892a7,#1498af,#149ab1,#0f7384);
+}
+
+input#sousOnglet2:checked ~ div#hiddenMenuVie2 > label#sousMenuVie1,
+input#sousOnglet3:checked ~ div#hiddenMenuVie2 > label#sousMenuVie1,
+input#sousOnglet5:checked ~ div#hiddenMenuVie1 > label#sousMenuVie4,
+input#sousOnglet6:checked ~ div#hiddenMenuVie1 > label#sousMenuVie4,
+input#onglet2:checked ~ div#menuViePrincipale > label#menuVieProfessionelle,
+input#sousOnglet5:checked ~ div#menuViePrincipale > label#menuVieProfessionelle,
+input#sousOnglet6:checked ~ div#menuViePrincipale > label#menuVieProfessionelle{
+	background-image: linear-gradient(#13899c,#1892a7,#1498af,#149ab1,#1793a7);
+}
+
+input#onglet1 ~ div#menuViePrincipale > label#menuVieProfessionelle:hover,
+input#onglet1 ~ div#hiddenMenuVie2 > label#sousMenuVie1:hover,
+input#sousOnglet2 ~ div#menuViePrincipale > label#menuVieProfessionelle:hover,
+input#sousOnglet2 ~ div#hiddenMenuVie2 > label#sousMenuVie2:hover,
+input#sousOnglet3 ~ div#menuViePrincipale > label#menuVieProfessionelle:hover,
+input#sousOnglet3 ~ div#hiddenMenuVie2 > label#sousMenuVie3:hover,
+input#onglet2 ~ div#menuViePrincipale > label#menuViePersonnelle:hover,
+input#onglet2 ~ div#hiddenMenuVie1 > label#sousMenuVie4:hover,
+input#sousOnglet5 ~ div#menuViePrincipale > label#menuViePersonnelle:hover,
+input#sousOnglet5 ~ div#hiddenMenuVie1 > label#sousMenuVie5:hover,
+input#sousOnglet6 ~ div#menuViePrincipale > label#menuViePersonnelle:hover,
+input#sousOnglet6 ~ div#hiddenMenuVie1 > label#sousMenuVie6:hover{
+		background-image: linear-gradient(#0d6977,#1892a7,#1498af,#149ab1,#0f7384);
 		transition: all 0.2s;
 }
 
 .liAlignementMenuVieAvant {
-
 	min-width: 10em;
 }
 
 .liAlignementMenuVieApres {
-
 	padding-left: 2em;
 }
 
 .marginLeftIconeLien {
-
 	margin-left: 10px;
 }
 
-.lienPersonalise {
+.lienPersonalise, .lienPersonalise:focus, .lienPersonalise:active{
+	text-decoration: none;
+	color: rgb(224, 222, 222);
+	font-family: 'Baloo Bhaijaan', cursive;
+}
 
+.lienPersonalise:visited {
+	color: rgb(187, 187, 187);
+}
 
+.lienPersonalise:hover{
+	background-image: linear-gradient(#177180,#1892a7,#1498af,#1892a7,#177180);
+}
+
+.backColorDivMenuVie{
+	background-color: rgba(15, 116, 133, 0.88);
+}
+
+.colorWhite{
+	color: white;
+}
+
+.colorBlancSombre{
+	color: #ccc;
+}
+
+.formEmail{
+	flex-direction: column;
+	min-width: 20em;
+	max-width: 35em;
+	margin-left: auto;
+	margin-right: auto;
+	min-height: 20em;
+}
+
+.inputFormSujet{
+	min-height: 2em;
+	min-width: 6em;
+}
+
+.widthFormEmail{
+	min-height: 2em;
+	min-width: 6em;
+}
+
+.inputFormMessage{
+	min-height: 11em;
+	min-width: 28em;
+}
+
+.heightFormEmailSujet{
+	margin: 1em 0em 3em 0em;
+}
+
+.caractereInTextareaIndent{
+	align-self: center;
+	margin-left: 6em;
+}
+
+.onMouseOverMail:hover{
+	font-size: 1.1em;
+    text-decoration-line: underline;
+}
+
+.onMouseOverMail{
+    text-decoration-line: underline;
+}
+
+input#formMailShow:checked ~ div#sendEmail{
+	display: block;
+}
+
+input#formMailShow:checked ~ div#sousMenuVieBlock1,
+input#formMailShow:checked ~ div#sousMenuVieBlock2,
+input#formMailShow:checked ~ div#sousMenuVieBlock3,
+input#formMailShow:checked ~ div#sousMenuVieBlock4,
+input#formMailShow:checked ~ div#sousMenuVieBlock5,
+input#formMailShow:checked ~ div#sousMenuVieBlock6{
+	display: none;
+}
+
+.alignVertical{
+	align-self: center;
+}
+
+.alignVerticalAfter{
+	align-self: center;
+	margin-left: 1em;
 }

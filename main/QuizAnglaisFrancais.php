@@ -9,7 +9,7 @@
 <body>
 <?php include("../include/header.php") ?>
 
-<main class="centrale_haut">
+<main class="centraleHaut">
 		<h1>TITRE</h1>
 		<h2>Sommaire</h2>
 

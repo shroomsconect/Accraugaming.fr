@@ -3,7 +3,6 @@
 <head>
 	<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
 	<link rel="stylesheet" type='text/css' href="css/style.css">
-	<link href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre" rel="stylesheet">
 	<link rel="icon" type="image/jpg" href="image/favicon.jpg" />
 	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 	<title>Accraugaming.fr</title>
@@ -11,16 +10,26 @@
 
 <body>
 <header>
-	<nav class="barre_de_liens">
-		<ul class="barre_menu">
-			<li><a id="barre_menu_lien1" href="main/CV.php">Curricullum-Vitae</a></li>
-			<li><a id="barre_menu_lien2" href="main/QuizAnglaisFrancais.php" title="Apprendre l'anglais facilement">Quiz Anglais-Français</a></li>
-			<li><a id="barre_menu_lien3" href="">lien3</a></li>
+	<nav class="barreDeLien flex">
+		<ul class="barreMenu flex">
+			<li class="flex"><a id="barreMenuLien1"></a></li>
+			<li class="flex"><a id="barreMenuLien2" href="../main/CV.php">Curriculum-Vitae</a></li>
+			<li class="flex"><a id="barreMenuLien3"></a></li>
 		</ul>
 	</nav>
 </header>
-
-<main class="centrale_haut">
+<!--
+<header>
+	<nav class="barreDeLien flex">
+		<ul class="barreMenu flex">
+			<li class="flex"><a id="barreMenuLien1" href="main/CV.php">Curricullum-Vitae</a></li>
+			<li class="flex"><a id="barreMenuLien2" href="main/QuizAnglaisFrancais.php" title="Apprendre l'anglais facilement">Quiz Anglais-Français</a></li>
+			<li class="flex"><a id="barreMenuLien3" href="">lien3</a></li>
+		</ul>
+	</nav>
+</header>
+-->
+	<main class="centraleHaut">
 		<h1>TITRE</h1>
 		<h2>Sommaire</h2>
 		<ul>
