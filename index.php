@@ -13,7 +13,7 @@
 	<nav class="barreDeLien flex">
 		<ul class="barreMenu flex">
 			<li class="flex"><a id="barreMenuLien1"></a></li>
-			<li class="flex"><a id="barreMenuLien2" href="../main/CV.php">Curriculum-Vitae</a></li>
+			<li class="flex"><a id="barreMenuLien2" href="main/CV.php">Curriculum-Vitae</a></li>
 			<li class="flex"><a id="barreMenuLien3"></a></li>
 		</ul>
 	</nav>
