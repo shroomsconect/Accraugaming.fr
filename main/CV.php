@@ -6,7 +6,9 @@
 </head>
 
 <body>
-<?php include_once("../include/header.php"); ?>
+<?php
+include_once("../include/header.php");
+?>
 <main class="centraleHautCv">
 	<input type="radio" name="onglets" class="displayNone" id="onglet1">
 	<input type="radio" name="onglets" class="displayNone" id="onglet2">
@@ -111,7 +113,7 @@
 		<p class="h2">}</p>
 	</div>
 	<div class="experience backColorDivMenuVie colorWhite displayNone" id="sendEmail">
-		<form class="formEmail flex" action="" onsubmethod="post">
+		<form class="formEmail flex" action="" method="post">
 			<div id="deplaceElement29" onclick="getElement(this)" class="flex">
 				<label class="widthFormEmail">Email</label>
 				<input class="inputFormEmail" type="email" name="email" placeholder="Entrez votre email" required>
@@ -138,6 +140,7 @@
 include_once("../fonction/fonction.php");
 if (isset($_POST["email"]) && isset($_POST["sujet"]) && isset($_POST["message"]))
 {
+	echo "test de ouf";
 	sendEmail($_POST["email"],$_POST["sujet"],$_POST["message"]);
 }
 if (isset($_POST["deplaceElement"]))

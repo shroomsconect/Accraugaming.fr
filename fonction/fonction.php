@@ -1,17 +1,22 @@
 <?php
-function sendEmail($mail,$sujet,$mess)
+function sendEmail($email,$sujet,$message)
 {
-	//$boundary = "-----=".md5(rand());
+	// On assigne et protège nos variables
+	$from=htmlspecialchars("From: Accraugaming.fr : ".$email."\r\n");
+	$message=stripslashes(htmlspecialchars($message));
 
-	$header = "From: \"Developont\"<stef.pachot1@gmail.com>\n";
-	$header .= "Reply-to: \"Stephane\" <stef.pachot@gmail.com>\n";
-	$header .= "MIME-Version: 1.0\n";
-	$header .= "Content-Type: text/rfc822 [RFC822];\n";
+	// On met ici notre e-mail
+	$destinataire="stephane.pachot@orange.fr";
 
-	$message = "Content-Type: text/plain; charset=\"iso-8859-1\"\n";
-	$message .= "Content-Transfer-Encoding: 8bit\n";
-	$message .= "$mess";
+	$verif = mail($destinataire,$sujet,$message,$from);
 
-	mail($mail,$sujet,$message,$header);
+	if ($verif)
+	{
+		echo "<script>alert('L\'envoie du mail à fonctionné')</script>";
+	}
+	else
+	{
+		echo "<script>alert('Une ERREUR est survenue pendant l\'envoie du mail')</script>";
+	}
 }
 ?>
