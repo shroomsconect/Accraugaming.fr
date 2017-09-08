@@ -70,8 +70,17 @@ include_once("../include/header.php");
 			<li id="deplaceElement27" onclick="getElement(this)" class="indentation2 flex">
 				<span class="liAlignementMenuVieAvant">["Developont.fr"]</span>=>
 				<span class="liAlignementMenuVieApres">("
-					<a href="http://developont.fr/accueil/accueil.php" class="lienPersonalise">http://developont.fr/accueil/accueil.php</a>
-					<a class="marginLeftIconeLien lienPersonalise" href="http://developont.fr/accueil/accueil.php" target="_blank">
+					<a href="//developont.fr" class="lienPersonalise">developont.fr</a>
+					<a class="marginLeftIconeLien lienPersonalise" href="//developont.fr" target="_blank">
+						<i class="fa fa-external-link" aria-hidden="true"></i>
+					</a>"),
+				</span>
+			</li>
+			<li id="deplaceElement27" onclick="getElement(this)" class="indentation2 flex">
+				<span class="liAlignementMenuVieAvant">["SearchMe"]</span>=>
+				<span class="liAlignementMenuVieApres">("
+					<a href="../../Table4/" class="lienPersonalise">developont.fr/~stephane/SearchMe/</a>
+					<a class="marginLeftIconeLien lienPersonalise" href="../../Table4/" target="_blank">
 						<i class="fa fa-external-link" aria-hidden="true"></i>
 					</a>"),
 				</span>
@@ -82,7 +91,7 @@ include_once("../include/header.php");
 			<li id="deplaceElement28" onclick="getElement(this)" class="indentation2 flex">
 				<span class="liAlignementMenuVieAvant">["deplacerLesElements"]</span>=>
 				<span class="liAlignementMenuVieApres">("
-					<a class="lienPersonalise"><label for="deplaceElement">Cliquer pour pouvoir déplacer les éléments </label></a>"),
+					<a class="lienPersonalise"><label for="deplaceElement">Cliquer pour pouvoir déplacer les éléments</label></a>"),
 				</span>
 			</li>
 		</ul>
