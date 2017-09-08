@@ -79,7 +79,7 @@ include_once("../include/header.php");
 			<li id="deplaceElement27" onclick="getElement(this)" class="indentation2 flex">
 				<span class="liAlignementMenuVieAvant">["SearchMe"]</span>=>
 				<span class="liAlignementMenuVieApres">("
-					<a href="../../Table4/" class="lienPersonalise">developont.fr/~stephane/SearchMe/</a>
+					<a href="../../SearchMe/" class="lienPersonalise">developont.fr/~stephane/SearchMe/</a>
 					<a class="marginLeftIconeLien lienPersonalise" href="../../Table4/" target="_blank">
 						<i class="fa fa-external-link" aria-hidden="true"></i>
 					</a>"),
