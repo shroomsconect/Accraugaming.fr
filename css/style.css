@@ -1,4 +1,19 @@
 /*@import url('https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre');*/
+/*position: absolute;
+border-radius: 5px;
+/*height: 20em;
+width: 20em;
+background-color: rgba(222, 184, 135, 0.9);
+background-image:
+    linear-gradient(45deg, #000 26%, transparent 26%),
+    linear-gradient(135deg, #000 26%, transparent 26%),
+    linear-gradient(225deg, #000 26%, transparent 26%),
+    linear-gradient(315deg, #000 26%, transparent 26%);
+/*color: gray;
+box-shadow: rgba(0,0,0,0.5) -7px 6px 19px 0;
+z-index: 10;
+background-size: 1%;
+background-position: 30px 0px, 30px 0px,-30px 0px,-30px 0px;*/
 @font-face{
   font-family: "Baloo Bhaijaan";
   src: url("BalooBhaijaan-Regular.ttf");
@@ -20,6 +35,7 @@ body{
 	background-size: cover;
 	margin: 0;
 	padding: 0;
+    position: relative;
 }
 
 main.centraleHaut{
@@ -31,9 +47,9 @@ main.centraleHaut{
 	max-width: 1200px;
 }
 
-main.centraleHautCv {
+main.centraleHautCv{
 	background-color: rgba(0, 0, 0, 0.39);
-	height: 50em;
+	min-height: 50em;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 5em;
@@ -201,7 +217,6 @@ ul.barreMenu a, ul.barreMenu a:visited, ul.barreMenu a:focus, ul.barreMenu a:act
 }
 
 .experience {
-	background-color: white;
 	padding: 1em 0;
 }
 
@@ -245,13 +260,17 @@ ul.barreMenu a, ul.barreMenu a:visited, ul.barreMenu a:focus, ul.barreMenu a:act
 	margin-left: 4em;
 }
 
+.indentation3 {
+    text-indent: 6em;
+}
+
 .styleList::before {
 	content: "*";
 	padding-right: 5px;
 }
 
-.indentation3 {
-	text-indent: 6em;
+.widthReset{
+    max-width: max-content;
 }
 
 input#onglet1:checked ~ div#menuViePrincipale > label#menuVieProfessionelle,
@@ -395,4 +414,63 @@ input#formMailShow:checked ~ div#sousMenuVieBlock6{
 .alignVerticalAfter{
 	align-self: center;
 	margin-left: 1em;
+}
+
+.infoBulle{
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: none;
+    z-index: 10;
+}
+
+.infoBulle > div#positionInfoBulleClicker{
+    position: relative;
+    border-radius: 5px;
+    background-color: rgba(222, 184, 135, 0.9);
+    color: black;
+    box-shadow: rgba(0,0,0,0.5) -7px 6px 19px 0;
+    display: flex;
+    margin: auto;
+    height: 30%;
+    width: 30%;
+}
+
+.infoBulle > div#positionInfoBulleClicker > div{
+    margin: auto;
+    text-align: center;
+}
+
+
+
+.infoBulle > div#positionInfoBulleRemoveClicker{
+    position: relative;
+    border-radius: 5px;
+    background-color: rgba(222, 184, 135, 0.9);
+    color: black;
+    box-shadow: rgba(0,0,0,0.5) -7px 6px 19px 0;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    height: 13%;
+    width: 27%;
+    top: 75px;
+}
+
+.infoBulle > div#positionInfoBulleRemoveClicker::before{
+    content: '';
+    position: absolute;
+    border-top: 40px solid transparent;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-bottom: 40px solid rgb(201, 170, 127);
+    top: -80px;
+    left: 50%;
+    margin-left: -40px;
+}
+
+.infoBulle > div#positionInfoBulleRemoveClicker > div{
+    margin: auto;
+    text-align: center;
 }

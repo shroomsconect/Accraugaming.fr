@@ -12,11 +12,11 @@ function sendEmail($email,$sujet,$message)
 
 	if ($verif)
 	{
-		echo "<script>alert('L\'envoie du mail à fonctionné')</script>";
+		echo "<script>alert('L\'envoi du mail a fonctionné')</script>";
 	}
 	else
 	{
-		echo "<script>alert('Une ERREUR est survenue pendant l\'envoie du mail')</script>";
+		echo "<script>alert('Une ERREUR est survenue pendant l\'envoi du mail')</script>";
 	}
 }
 ?>
